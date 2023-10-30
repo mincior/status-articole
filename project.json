@@ -1,0 +1,70 @@
+{
+  "name": "status-articole",
+  "projectId": "89ebb79d-c8a1-40a3-836d-397bb81d1a6d",
+  "description": "Raport saptamanal Status articole (lunea) catre d-na Adriana Florea",
+  "main": "status-articole.xaml",
+  "dependencies": {
+    "UiPath.Database.Activities": "[1.5.0]",
+    "UiPath.Excel.Activities": "[2.11.0-preview]",
+    "UiPath.System.Activities": "[21.6.1-preview]",
+    "UiPath.UIAutomation.Activities": "[21.6.1-preview]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.10.4.0",
+  "projectVersion": "1.0.13",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "status-articole.xaml",
+      "uniqueId": "095c03f9-efc5-4351-bdb6-ae0a620bc40e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "status-articole.xaml",
+      "uniqueId": "08bcbf2c-fa8a-4cea-a863-4e8b92365e77",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {
+    "iconUrl": ".package/add_to_shopping_cart.png"
+  },
+  "targetFramework": "Legacy"
+}

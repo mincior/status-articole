@@ -1,0 +1,424 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="selecteazaAni" this:selecteazaAni.in_nrAni="3" this:selecteazaAni.in_numeCub="Galben" this:selecteazaAni.in_limba="romana" this:selecteazaAni.in_locatieSelecteazaAni="Filters" this:selecteazaAni.in_pozitieSelecteazaAni="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_nrAni" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_numeCub" Type="InArgument(x:String)" />
+    <x:Property Name="in_limba" Type="InArgument(x:String)" />
+    <x:Property Name="in_locatieSelecteazaAni" Type="InArgument(x:String)" />
+    <x:Property Name="in_pozitieSelecteazaAni" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1288,4044</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>selecteazaAni_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="28">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="selecteazaAni" sap:VirtualizedContainerService.HintSize="616,3979" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="out_ani" />
+      <Variable x:TypeArguments="x:String" Name="mySelector" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Daca cubul din BI are campul An, acest workflow va pune in filtru anii specificati de variabila in_nrAni, si anume: 0 sau 1 = anul curent; numere negative = al n-lea an in urma, numere pozitive = n ani selectati." DisplayName="Selecteaza" sap:VirtualizedContainerService.HintSize="574,3891" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:UiElement" Name="myElement" />
+        <Variable x:TypeArguments="x:Boolean" Name="succes" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="512,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindowIcon' title='SeniorVisualBI - "+in_numeCub+"' /&gt;"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="512,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ApasaButon.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:Boolean" x:Key="in_clickDreapta">
+            <Literal x:TypeArguments="x:Boolean" Value="True" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_locatie">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_locatieSelecteazaAni" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_pozitie">
+            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_pozitieSelecteazaAni" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_numeCub">
+            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_numeCub" />
+          </InArgument>
+          <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_elementSelectat">
+            <mva:VisualBasicReference x:TypeArguments="ui:UiElement" ExpressionText="myElement" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:Boolean" x:Key="in_dubluClick">
+            <Literal x:TypeArguments="x:Boolean" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_succes">
+            <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="succes" />
+          </OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="302d04fe-b47d-4dfb-91eb-9e629a4d7d32" InformativeScreenshot="724b691016f25e5e43c3b68974922138" Selector="&lt;wnd app='tableau.exe' cls='Qt5QWindowPopupDropShadowSaveBits' title='Tableau' /&gt;&lt;ctrl name='Edit Filter...' role='menu item' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+      <Assign sap:VirtualizedContainerService.HintSize="512,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='Select from list Alt+S' role='radio button' /&gt;"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'radio button'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6020705b-6c47-40e5-861f-728eca1c8665" InformativeScreenshot="db576b359e58525181fecea40b7df4d3" Selector="[mySelector]" TimeoutMS="2000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <Assign sap:VirtualizedContainerService.HintSize="512,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='Vertical Layout Container' role='border' /&gt;&lt;ctrl name='Search Widget Container' role='border' /&gt;&lt;ctrl name='SearchWidget_SearchBoxWidget' role='border' /&gt;&lt;ctrl role='push button' /&gt;"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de8ebf03-42d1-42ee-afe4-bd6277a08c8d" InformativeScreenshot="5afb0c7e3cd095232e6d12da3dfdc4f9" Selector="[mySelector]" TimeoutMS="500" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <Assign sap:VirtualizedContainerService.HintSize="512,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='None Alt+o' role='push button' /&gt;"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de8ebf03-42d1-42ee-afe4-bd6277a08c8d" InformativeScreenshot="36f639ed33a4684bec79fdb5418aef2d" Selector="[mySelector]" TimeoutMS="500" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="in_nrAni tine un intreg cu urmatoarele valori: 1 = anul curent, -1 anul trecut, -2 acum 2 ani, 2 doi ani in urma, 3 trei ani in urma, n cu minus sau cu plus la fel ca mai sus. Acest cod pune in s() as string acesti ani" Code="         Dim d As Date = DateTime.Now, s() As String, k As Integer&#xA;        d = DateSerial(d.Year, d.Month, 1)&#xA;        If in_nrAni &gt; 0 Then&#xA;            For k = 0 To in_nrAni - 1&#xA;                ReDim Preserve s(k)&#xA;                s(k) = (d.Year - k).ToString&#xA;            Next&#xA;        Else&#xA;            ReDim Preserve s(0)&#xA;            s(0) = (d.Year + in_nrAni).ToString&#xA;&#xA;        End If&#xA;        out_ani = s" DisplayName="Invoke code face un string ce contine anii " sap:VirtualizedContainerService.HintSize="512,237" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode.Arguments>
+          <OutArgument x:TypeArguments="s:String[]" x:Key="out_ani">[out_ani]</OutArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_nrAni">[in_nrAni]</InArgument>
+        </ui:InvokeCode.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeCode>
+      <Assign sap:VirtualizedContainerService.HintSize="512,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='Vertical Layout Container' role='border' /&gt;&lt;ctrl name='Search Widget Container' role='border' /&gt;&lt;ctrl name='SearchWidget_SearchBoxWidget' role='border' /&gt;&lt;ctrl role='push button' /&gt;"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de8ebf03-42d1-42ee-afe4-bd6277a08c8d" InformativeScreenshot="3c018bb5b220438ec207a45b26ae78c1" Selector="[mySelector]" TimeoutMS="500" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <Assign sap:VirtualizedContainerService.HintSize="512,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='None Alt+o' role='push button' /&gt;"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de8ebf03-42d1-42ee-afe4-bd6277a08c8d" InformativeScreenshot="36f639ed33a4684bec79fdb5418aef2d" Selector="[mySelector]" TimeoutMS="500" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512,1410" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[out_ani]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="strAnul" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1284" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='Vertical Layout Container' role='border' /&gt;&lt;ctrl name='Search Widget Container' role='border' /&gt;&lt;ctrl name='SearchWidget_SearchBoxWidget' role='border' /&gt;&lt;ctrl role='push button' /&gt;"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de8ebf03-42d1-42ee-afe4-bd6277a08c8d" InformativeScreenshot="08adaa91ec76c355df3027e1b1ff2e13" Selector="[mySelector]" TimeoutMS="500" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='Vertical Layout Container' role='border' /&gt;&lt;ctrl name='Search Widget Container' role='border' /&gt;&lt;ctrl name='SearchWidget_SearchBoxWidget' role='border' /&gt;&lt;ctrl name=' Down' role='combo box' /&gt;&lt;ctrl role='editable text' /&gt;"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de8ebf03-42d1-42ee-afe4-bd6277a08c8d" InformativeScreenshot="b3c7de5923a213190d6bf62d7bec34f5" Selector="[mySelector]" TimeoutMS="500" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_11">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='Vertical Layout Container' role='border' /&gt;&lt;ctrl name='Search Widget Container' role='border' /&gt;&lt;ctrl name='SearchWidget_SearchBoxWidget' role='border' /&gt;&lt;ctrl name=' Down' role='combo box' /&gt;&lt;ctrl role='editable text' /&gt;"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="False" ClickBeforeTyping="True" DelayBetweenKeys="20" DisplayName="Type Into 'editable text'" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,135" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[strAnul]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c4c42d8-e05f-4ff6-bce8-a9b1e0144bfa" InformativeScreenshot="08e8f5991f8d816b763170ec78125212" Selector="[mySelector]">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Scrie anul: &quot; &amp; strAnul]" />
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+if(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='Vertical Layout Container' role='border' /&gt;&lt;ctrl name='Search Widget Container' role='border' /&gt;&lt;ctrl name='"+strAnul+"' role='list item' /&gt;"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayMS="1000" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target Element="{x:Null}" Id="de8ebf03-42d1-42ee-afe4-bd6277a08c8d" InformativeScreenshot="91b9a408c57942ede8ac3cc08ba63745" Selector="[mySelector]" TimeoutMS="500" WaitForReady="COMPLETE">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="0, 20, 30, -20" />
+                    </ui:Target.ClippingRegion>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+      <Assign sap:VirtualizedContainerService.HintSize="512,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[mySelector]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["&lt;wnd app='tableau.exe' cls='Qt5QWindow' title='Filter ["+If(in_limba = "romana", "An (Data)", "Year (Date)")+"]' /&gt;&lt;ctrl name='OK Enter' role='push button' /&gt;"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  OK Enter'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a11ae0a2-e7a4-4c7a-8133-9c1c533a88b2" InformativeScreenshot="c7d05003b964eb7aecbba4a3e967114b" Selector="[mySelector]">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+    </Sequence>
+  </Sequence>
+</Activity>

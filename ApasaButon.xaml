@@ -1,0 +1,302 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ApasaButon" this:ApasaButon.in_clickDreapta="True" this:ApasaButon.in_locatie="Columns" this:ApasaButon.in_pozitie="1" this:ApasaButon.in_numeCub="VzLunara" this:ApasaButon.in_dubluClick="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_clickDreapta" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_locatie" Type="InArgument(x:String)" />
+    <x:Property Name="in_pozitie" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_numeCub" Type="InArgument(x:String)" />
+    <x:Property Name="out_elementSelectat" Type="OutArgument(ui:UiElement)" />
+    <x:Property Name="in_dubluClick" Type="InArgument(x:Boolean)" />
+    <x:Property Name="out_succes" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>982,2031</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ApasaButon_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="52">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ApasaButon" sap:VirtualizedContainerService.HintSize="682,1966" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:ClickType" Name="myClickType" />
+      <Variable x:TypeArguments="ui:MouseButton" Name="myMouseButton" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="depl_orizontal" />
+      <Variable x:TypeArguments="ui:Region" Name="myClippingRegion" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="depl_vertical" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Face click  pe un buton in BI situat in in_locatie pe pozitia in_pozitie. in_locatie poate fi : 'Columns', 'Rows', 'Filters'. in_pozitie spune al catulea buton este in in_pozitie.  Functie de in_clickDreapta si in_doubleClick va da click stanga sau dreapta, click simplu sau dublu.  Atentie cand se combina dublu click cu click dreapta.&#xA;&#xA;Va returna in out_ElementSelectat elementul pe care s-a facut click. &#xA;" DisplayName="Apasa" sap:VirtualizedContainerService.HintSize="640,1878" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="578,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[out_succes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[in_locatie]" sap:VirtualizedContainerService.HintSize="578,700" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+        <Sequence x:Key="Columns" sap:VirtualizedContainerService.HintSize="538,470" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Columns" sap:VirtualizedContainerService.HintSize="496,382" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Find Element 'client'" FoundElement="[out_elementSelectat]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c52f660b-cb7a-443a-853e-e5020347f74b" InformativeScreenshot="3115b21d63fa8dd6bf6cfe566120c302" Selector="[String.Format(&quot;&lt;wnd app='tableau.exe' cls='Qt5QWindowIcon' title='SeniorVisualBI - {0}' /&gt;&lt;ctrl idx='130' role='client' /&gt;&quot;, in_numeCub)]" TimeoutMS="5000" WaitForReady="COMPLETE" />
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <Assign sap2010:Annotation.AnnotationText="Cand se face click pe un buton in Filtes trebuie adaugat un deplasament la coordonata Left in Clipping Region" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[depl_orizontal]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[in_pozitie * 150]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+          </Sequence>
+        </Sequence>
+        <Sequence x:Key="Rows" sap:VirtualizedContainerService.HintSize="538,470" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Rows" sap:VirtualizedContainerService.HintSize="496,382" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Find Element 'client'" FoundElement="[out_elementSelectat]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c52f660b-cb7a-443a-853e-e5020347f74b" InformativeScreenshot="33394622d913b4968bfe528e734e8573" Selector="&lt;wnd app='tableau.exe' cls='Qt5QWindowIcon' title='SeniorVisualBI - {{in_numeCub}}' /&gt;&lt;ctrl idx='131' role='client' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <Assign sap2010:Annotation.AnnotationText="Cand se face click pe un buton in Filtes trebuie adaugat un deplasament la coordonata Left in Clipping Region" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[depl_orizontal]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[in_pozitie * 150]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+          </Sequence>
+        </Sequence>
+        <Sequence x:Key="Filters" sap:VirtualizedContainerService.HintSize="538,634" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Filters" sap:VirtualizedContainerService.HintSize="496,546" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Find Element 'client'" FoundElement="[out_elementSelectat]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c52f660b-cb7a-443a-853e-e5020347f74b" InformativeScreenshot="5caf605004758d3970463f3d0eb1a852" Selector="&lt;wnd app='tableau.exe' cls='Qt5QWindowIcon' title='SeniorVisualBI - {{in_numeCub}}' /&gt;&lt;ctrl idx='126' role='client' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <Assign sap2010:Annotation.AnnotationText="Cand se face click pe un buton in Filtes trebuie adaugat un deplasament la coordonata Left in Clipping Region" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[depl_orizontal]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">15</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <Assign sap2010:Annotation.AnnotationText="Cand se face click pe un buton in Filtes trebuie adaugat un deplasament la coordonata Left in Clipping Region" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[depl_vertical]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[in_pozitie * 22]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+          </Sequence>
+        </Sequence>
+      </Switch>
+      <Assign sap:VirtualizedContainerService.HintSize="578,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="ui:Region">[myClippingRegion]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="ui:Region">[New Uipath.Core.Region(New Rectangle(25 + depl_orizontal,15+depl_vertical,0,0))]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="578,161" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="ui:Region">[myClippingRegion]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="ui:Region">[New Uipath.Core.Region(New Rectangle(25 + depl_orizontal,15+depl_vertical,0,0))]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="ui:ClickType">[myClickType]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="ui:ClickType">[if(in_dubluClick = true, ClickType.CLICK_DOUBLE,ClickType.CLICK_SINGLE)]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="ui:MouseButton">[myMouseButton]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="ui:MouseButton">[if(in_clickDreapta = true, MouseButton.BTN_RIGHT,MouseButton.BTN_LEFT)]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+      <If Condition="[out_elementSelectat  Is Nothing = False]" sap:VirtualizedContainerService.HintSize="578,302" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="400,113" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:SetClippingRegion Size="{x:Null}" ContinueOnError="True" Direction="RECTANGLE" DisplayName="Set Clipping Region" Element="[out_elementSelectat]" sap:VirtualizedContainerService.HintSize="358,25" sap2010:WorkflowViewState.IdRef="SetClippingRegion_1" Region="[myClippingRegion]" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="" ClickType="[myClickType]" ContinueOnError="True" DisplayName="Click 'client'" sap:VirtualizedContainerService.HintSize="578,138" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="[myMouseButton]">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[out_elementSelectat]" Id="ce0781ea-54f4-4168-858e-299fc6f1fb3a" InformativeScreenshot="f19a0e81baec0d9ee131a2782bff77e3" TimeoutMS="1000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:Click>
+    </Sequence>
+  </Sequence>
+</Activity>

@@ -1,0 +1,230 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Status_articole" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="811,1053" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="49">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>Status_articole</x:String>
+      <x:String>UiPath.Activities.System.Compression.Zip</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>Microsoft.Activities.Extensions.Statements</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>DataService.Status_articole</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Intrare principala" sap:VirtualizedContainerService.HintSize="821,1028" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="caleAplicatie" />
+      <Variable x:TypeArguments="x:String" Name="numeAplicatie" />
+      <Variable x:TypeArguments="x:Boolean" Name="emailSend" />
+      <Variable x:TypeArguments="x:Boolean" Name="executaMacroExcel" />
+      <Variable x:TypeArguments="x:Boolean" Name="extrageRapoarteExcelDinBI" />
+      <Variable x:TypeArguments="x:String" Name="rezultatExecutie" />
+      <Variable x:TypeArguments="x:String" Name="numeFisierExcel" />
+      <Variable x:TypeArguments="x:String" Name="emailBody" />
+      <Variable x:TypeArguments="x:String" Name="emailSubiect" />
+      <Variable x:TypeArguments="x:String" Name="fisiereBI" />
+      <Variable x:TypeArguments="x:String" Name="dataRaportarii" />
+      <Variable x:TypeArguments="x:String" Name="tipRaport" />
+      <Variable x:TypeArguments="x:String" Name="numeFisierIesire" />
+      <Variable x:TypeArguments="x:String" Name="emailCC" />
+      <Variable x:TypeArguments="x:String" Name="emailBCC" />
+      <Variable x:TypeArguments="x:String" Name="emailTo" />
+      <Variable x:TypeArguments="x:Boolean" Name="extrageRapoarteExcelDinERP" />
+      <Variable x:TypeArguments="x:Boolean" Name="emailSendOnlyToMe" />
+      <Variable x:TypeArguments="x:String" Name="emailMe" />
+      <Variable x:TypeArguments="x:String" Name="emailSendOnlyToMeCC" />
+      <Variable x:TypeArguments="x:Boolean" Name="executaSQL" />
+      <Variable x:TypeArguments="x:Int32" Name="numarLuniActualizate" />
+      <Variable x:TypeArguments="x:Boolean" Name="impartePeFiliale" />
+      <Variable x:TypeArguments="x:Boolean" Name="impartePeAgenti" />
+      <Variable x:TypeArguments="x:String" Name="numeRobot" />
+      <Variable x:TypeArguments="ui:Window" Name="myConsolightRobotsInterfaceWindow" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="779,82" sap2010:WorkflowViewState.IdRef="Assign_20">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[numeRobot]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Status articole</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitializareVariabileSQLServer" sap:VirtualizedContainerService.HintSize="779,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="InitializareVariabileSQLServer.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_caleAplicatie">[caleAplicatie]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_numeAplicatie">[numeAplicatie]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_tipRaport">[tipRaport]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_executaMacroExcel">[cbool(executaMacroExcel)]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_emailCC">[emailCC]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_emailTo">[emailTo]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_emailBody">[emailBody]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_emailSubiect">[emailSubiect]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_extrageRapoarteExcelDinERP">[cbool(extrageRapoarteExcelDinERP)]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_emailSend">[cbool(emailSend)]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_emailSendOnlyToMe">[cbool(emailSendOnlyToMe)]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_emailMe">[emailMe]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_emailSendOnlyToMeCC">[emailSendOnlyToMeCC]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_dataRaportarii">[dataRaportarii]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_executaSQL">[cbool(executaSQL)]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_fisiereBI">[fisiereBI]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_extrageRapoarteExcelDinBI">[cbool(extrageRapoarteExcelDinBI)]</OutArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_numarLuniActualizate">[numarLuniActualizate]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_impartePeFiliale">[cbool(impartePeFiliale)]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_numeRobot">[numeRobot]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_numeFisierExcel">[numeFisierExcel]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="779,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[caleAplicatie &amp; &quot;Robots\&quot; &amp; numeAplicatie &amp; &quot;\output\&quot; &amp; dataRaportarii]" />
+    <If Condition="[extrageRapoarteExcelDinBI = True]" DisplayName="If extrageRapoarteDinBI" sap:VirtualizedContainerService.HintSize="779,392" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,232" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Galben" DisplayName="Invoke ExtrageDinBISiExportaInExcelTemplate.xaml" sap:VirtualizedContainerService.HintSize="358,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="extrageDinBI.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_dataRaportarii">[dataRaportarii]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_numeCub">ClientiRelocati</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_caleAplicatie">[caleAplicatie]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_numeAplicatie">[numeAplicatie]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_asteptareIncarcareBI">60</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_metodaSelectie">ani</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_limba">romana</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_nrLuni">1</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_nrAni">3</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_metodaExport">export_excel_crosstab</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="in_siLunaCurenta">True</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_cellTextExportExcel">Partener</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_randExportExcel">4</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_coloanaExportExcel">A</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="in_lunaDoarInFiltru">False</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_locatieSelecteazaAni">Filters</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_pozitieSelecteazaAni">0</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;S-a optat pentru ocolirea extragerii de rapoarte excel din ERP&quot;]" />
+      </If.Else>
+    </If>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExecutaMacroExcel" sap:VirtualizedContainerService.HintSize="779,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ExecutaMacroExcel.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_caleAplicatie">[caleAplicatie]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_numeAplicatie">[numeAplicatie]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_rezultatExecutie">[rezultatExecutie]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
