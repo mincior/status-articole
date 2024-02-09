@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Status_articole" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="811,1053" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Status_articole" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="896,1139" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="49">
+    <scg:List x:TypeArguments="x:String" Capacity="98">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -39,17 +39,14 @@
       <x:String>UiPath.CV.Activities</x:String>
       <x:String>UiPath.CV.Activities.Interfaces</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
-      <x:String>UiPath.Mail</x:String>
-      <x:String>UiPath.Mail.Outlook.Activities</x:String>
-      <x:String>UiPath.Mail.Activities</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
-      <x:String>Status_articole</x:String>
       <x:String>UiPath.Activities.System.Compression.Zip</x:String>
       <x:String>UiPath.Activities.System.Encode</x:String>
       <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>Microsoft.Activities.Extensions.Statements</x:String>
       <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -97,9 +94,11 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Intrare principala" sap:VirtualizedContainerService.HintSize="821,1028" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Intrare principala" sap:VirtualizedContainerService.HintSize="891,1074" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="caleAplicatie" />
       <Variable x:TypeArguments="x:String" Name="numeAplicatie" />
@@ -133,7 +132,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="779,82" sap2010:WorkflowViewState.IdRef="Assign_20">
+    <Assign sap:VirtualizedContainerService.HintSize="829,82" sap2010:WorkflowViewState.IdRef="Assign_20">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[numeRobot]</OutArgument>
       </Assign.To>
@@ -141,7 +140,7 @@
         <InArgument x:TypeArguments="x:String">Status articole</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitializareVariabileSQLServer" sap:VirtualizedContainerService.HintSize="779,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="InitializareVariabileSQLServer.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitializareVariabileSQLServer" sap:VirtualizedContainerService.HintSize="829,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="InitializareVariabileSQLServer.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="out_caleAplicatie">[caleAplicatie]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_numeAplicatie">[numeAplicatie]</OutArgument>
@@ -172,8 +171,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="779,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[caleAplicatie &amp; &quot;Robots\&quot; &amp; numeAplicatie &amp; &quot;\output\&quot; &amp; dataRaportarii]" />
-    <If Condition="[extrageRapoarteExcelDinBI = True]" DisplayName="If extrageRapoarteDinBI" sap:VirtualizedContainerService.HintSize="779,392" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="829,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[caleAplicatie &amp; &quot;Robots\&quot; &amp; numeAplicatie &amp; &quot;\output\&quot; &amp; dataRaportarii]" />
+    <If Condition="[extrageRapoarteExcelDinBI = True]" DisplayName="If extrageRapoarteDinBI" sap:VirtualizedContainerService.HintSize="829,415" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -181,30 +180,30 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="400,232" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <Sequence sap:VirtualizedContainerService.HintSize="450,255" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Galben" DisplayName="Invoke ExtrageDinBISiExportaInExcelTemplate.xaml" sap:VirtualizedContainerService.HintSize="358,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="extrageDinBI.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Galben" DisplayName="Invoke ExtrageDinBISiExportaInExcelTemplate.xaml" sap:VirtualizedContainerService.HintSize="388,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="extrageDinBI.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_dataRaportarii">[dataRaportarii]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_numeCub">ClientiRelocati</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_numeCub">StatusArticole</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_caleAplicatie">[caleAplicatie]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_numeAplicatie">[numeAplicatie]</InArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="in_asteptareIncarcareBI">60</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_metodaSelectie">ani</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_limba">romana</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="in_nrLuni">1</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="in_nrAni">3</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_metodaExport">export_excel_crosstab</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_nrLuni">0</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_nrAni">4</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_metodaExport">export_data_access</InArgument>
               <InArgument x:TypeArguments="x:Boolean" x:Key="in_siLunaCurenta">True</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_cellTextExportExcel">Partener</InArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="in_randExportExcel">4</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_coloanaExportExcel">A</InArgument>
               <InArgument x:TypeArguments="x:Boolean" x:Key="in_lunaDoarInFiltru">False</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_locatieSelecteazaAni">Filters</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_locatieSelecteazaAni">Columns</InArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="in_pozitieSelecteazaAni">0</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
@@ -219,7 +218,7 @@
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;S-a optat pentru ocolirea extragerii de rapoarte excel din ERP&quot;]" />
       </If.Else>
     </If>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExecutaMacroExcel" sap:VirtualizedContainerService.HintSize="779,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ExecutaMacroExcel.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExecutaMacroExcel" sap:VirtualizedContainerService.HintSize="829,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ExecutaMacroExcel.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_caleAplicatie">[caleAplicatie]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_numeAplicatie">[numeAplicatie]</InArgument>

@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1288,4044</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>606,4004</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>selecteazaAni_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -44,37 +44,39 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
-      <AssemblyReference>System.Activities</AssemblyReference>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="selecteazaAni" sap:VirtualizedContainerService.HintSize="616,3979" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -108,27 +110,13 @@
       </Assign>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="512,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ApasaButon.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:Boolean" x:Key="in_clickDreapta">
-            <Literal x:TypeArguments="x:Boolean" Value="True" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_locatie">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_locatieSelecteazaAni" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_pozitie">
-            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_pozitieSelecteazaAni" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_numeCub">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_numeCub" />
-          </InArgument>
-          <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_elementSelectat">
-            <mva:VisualBasicReference x:TypeArguments="ui:UiElement" ExpressionText="myElement" />
-          </OutArgument>
-          <InArgument x:TypeArguments="x:Boolean" x:Key="in_dubluClick">
-            <Literal x:TypeArguments="x:Boolean" />
-          </InArgument>
-          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_succes">
-            <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="succes" />
-          </OutArgument>
+          <InArgument x:TypeArguments="x:Boolean" x:Key="in_clickDreapta">True</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_locatie">[in_locatieSelecteazaAni]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="in_pozitie">[in_pozitieSelecteazaAni]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_numeCub">[in_numeCub]</InArgument>
+          <OutArgument x:TypeArguments="ui:UiElement" x:Key="out_elementSelectat">[myElement]</OutArgument>
+          <InArgument x:TypeArguments="x:Boolean" x:Key="in_dubluClick">False</InArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_succes">[succes]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ExtrageDinBICostMarfaAchizitieDeVanzare" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_dataRaportarii="2023-01-01" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_numeCub="achizitii" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_caleAplicatie="C:\Consolight_RPA\" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_numeAplicatie="cod-produs" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_asteptareIncarcareBI="60" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_metodaSelectie="luni" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_limba="romana" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_nrLuni="11" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_nrAni="1" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_metodaExport="excel_crosstab" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_siLunaCurenta="True" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_cellTextExportExcel="Producator" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_randExportExcel="3" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_coloanaExportExcel="A" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_lunaDoarInFiltru="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ExtrageDinBICostMarfaAchizitieDeVanzare" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_dataRaportarii="2023-01-01" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_numeCub="achizitii" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_caleAplicatie="C:\Consolight_RPA\" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_numeAplicatie="cod-produs" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_asteptareIncarcareBI="60" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_metodaSelectie="luni" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_limba="romana" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_nrLuni="11" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_nrAni="1" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_metodaExport="excel_crosstab" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_siLunaCurenta="True" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_cellTextExportExcel="Producator" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_randExportExcel="3" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_coloanaExportExcel="A" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_lunaDoarInFiltru="False" this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_pozitieSelecteazaAni="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_dataRaportarii" Type="InArgument(x:String)" />
     <x:Property Name="in_numeCub" Type="InArgument(x:String)" />
@@ -15,8 +15,15 @@
     <x:Property Name="in_randExportExcel" Type="InArgument(x:Int32)" />
     <x:Property Name="in_coloanaExportExcel" Type="InArgument(x:String)" />
     <x:Property Name="in_lunaDoarInFiltru" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_locatieSelecteazaAni" Type="InArgument(x:String)" />
+    <x:Property Name="in_pozitieSelecteazaAni" Type="InArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1830,7135</sap:VirtualizedContainerService.HintSize>
+  <this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_locatieSelecteazaAni>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:ExtrageDinBICostMarfaAchizitieDeVanzare.in_locatieSelecteazaAni>
+  <sap:VirtualizedContainerService.HintSize>1850,7149</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -59,45 +66,47 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
-      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>netstandard</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -106,7 +115,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Dupa ce s-au parametrizat filtrele in ERP, se genereza si exporta in excel acele rapoarte." DisplayName="Extrage rapoarte din erp" sap:VirtualizedContainerService.HintSize="1840,7070" sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence sap2010:Annotation.AnnotationText="Dupa ce s-au parametrizat filtrele in ERP, se genereza si exporta in excel acele rapoarte." DisplayName="Extrage rapoarte din erp" sap:VirtualizedContainerService.HintSize="1860,7084" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="amGasit" />
       <Variable x:TypeArguments="ui:Window" Name="VisualBIApp" />
@@ -132,7 +141,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Extrage" sap:VirtualizedContainerService.HintSize="1798,6982" sap2010:WorkflowViewState.IdRef="Sequence_27">
+    <Sequence DisplayName="Extrage" sap:VirtualizedContainerService.HintSize="1798,6942" sap2010:WorkflowViewState.IdRef="Sequence_27">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -154,7 +163,7 @@
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c81fe362-a6fc-47a9-b573-3cf920367439" InformativeScreenshot="a95a962def35ceca526ad6f8bba45c61" Selector="&lt;wnd app='tableau.exe' cls='Qt5QWindowIcon' title='SeniorVisualBI*' /&gt;" TimeoutMS="500" WaitForReady="COMPLETE" />
         </ui:CloseApplication.Target>
       </ui:CloseApplication>
-      <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" ApplicationWindow="[VisualBIApp]" DisplayName="Open Senior Visual BI" FileName="C:\Program Files\Senior Software\SeniorVisualBI 2020.4\bin\tableau.exe" sap:VirtualizedContainerService.HintSize="1736,5498" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="44eb6349ea18ae1621b21a0a6f60ebc3" Selector="&lt;wnd app='tableau.exe' cls='Qt5QWindowIcon' title='SeniorVisualBI - Book1' /&gt;">
+      <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" ApplicationWindow="[VisualBIApp]" DisplayName="Open Senior Visual BI" FileName="C:\Program Files\Senior Software\SeniorVisualBI 2020.4\bin\tableau.exe" sap:VirtualizedContainerService.HintSize="1736,5458" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="44eb6349ea18ae1621b21a0a6f60ebc3" Selector="&lt;wnd app='tableau.exe' cls='Qt5QWindowIcon' title='SeniorVisualBI - Book1' /&gt;">
         <ui:OpenApplication.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -386,21 +395,11 @@
                         </ui:InvokeWorkflowFile>
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="ani" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="selecteazaAni.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:Int32" x:Key="in_nrAni">
-                              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_nrAni" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_numeCub">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_numeCub" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_limba">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_limba" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_locatieSelecteazaAni">
-                              <Literal x:TypeArguments="x:String">Filters</Literal>
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:Int32" x:Key="in_pozitieSelecteazaAni">
-                              <Literal x:TypeArguments="x:Int32" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:Int32" x:Key="in_nrAni">[in_nrAni]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_numeCub">[in_numeCub]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_limba">[in_limba]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_locatieSelecteazaAni">Filters</InArgument>
+                            <InArgument x:TypeArguments="x:Int32" x:Key="in_pozitieSelecteazaAni">0</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                       </Switch>

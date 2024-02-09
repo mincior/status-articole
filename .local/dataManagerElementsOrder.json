@@ -1,0 +1,292 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "raport-clienti-relocati.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "caleAplicatie&Sequence_1",
+        "numeAplicatie&Sequence_1",
+        "emailSend&Sequence_1",
+        "executaMacroExcel&Sequence_1",
+        "extrageRapoarteExcelDinBI&Sequence_1",
+        "rezultatExecutie&Sequence_1",
+        "numeFisierExcel&Sequence_1",
+        "emailBody&Sequence_1",
+        "emailSubiect&Sequence_1",
+        "fisiereBI&Sequence_1",
+        "dataRaportarii&Sequence_1",
+        "tipRaport&Sequence_1",
+        "numeFisierIesire&Sequence_1",
+        "emailCC&Sequence_1",
+        "emailBCC&Sequence_1",
+        "emailTo&Sequence_1",
+        "extrageRapoarteExcelDinERP&Sequence_1",
+        "emailSendOnlyToMe&Sequence_1",
+        "emailMe&Sequence_1",
+        "emailSendOnlyToMeCC&Sequence_1",
+        "executaSQL&Sequence_1",
+        "numarLuniActualizate&Sequence_1",
+        "impartePeFiliale&Sequence_1",
+        "impartePeAgenti&Sequence_1",
+        "numeRobot&Sequence_1",
+        "myConsolightRobotsInterfaceWindow&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "status-articole.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "caleAplicatie&Sequence_1",
+        "numeAplicatie&Sequence_1",
+        "emailSend&Sequence_1",
+        "executaMacroExcel&Sequence_1",
+        "extrageRapoarteExcelDinBI&Sequence_1",
+        "rezultatExecutie&Sequence_1",
+        "numeFisierExcel&Sequence_1",
+        "emailBody&Sequence_1",
+        "emailSubiect&Sequence_1",
+        "fisiereBI&Sequence_1",
+        "dataRaportarii&Sequence_1",
+        "tipRaport&Sequence_1",
+        "numeFisierIesire&Sequence_1",
+        "emailCC&Sequence_1",
+        "emailBCC&Sequence_1",
+        "emailTo&Sequence_1",
+        "extrageRapoarteExcelDinERP&Sequence_1",
+        "emailSendOnlyToMe&Sequence_1",
+        "emailMe&Sequence_1",
+        "emailSendOnlyToMeCC&Sequence_1",
+        "executaSQL&Sequence_1",
+        "numarLuniActualizate&Sequence_1",
+        "impartePeFiliale&Sequence_1",
+        "impartePeAgenti&Sequence_1",
+        "numeRobot&Sequence_1",
+        "myConsolightRobotsInterfaceWindow&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "extrageDinBI.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "amGasit&Sequence_7",
+        "VisualBIApp&Sequence_7",
+        "myElement&Sequence_7",
+        "elExists&Sequence_7",
+        "myPass&Sequence_7",
+        "clipboardData&Sequence_7",
+        "myElement1&Sequence_7",
+        "elExists1&Sequence_7",
+        "myUser&Sequence_7",
+        "succes&Sequence_7",
+        "mySelector&Sequence_7",
+        "selector&Sequence_7",
+        "el&Sequence_7",
+        "myImage&Sequence_7",
+        "delay&Sequence_7",
+        "succesAsteptareIncarcareDate&Sequence_7",
+        "limbaSetata&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_pozitieSelecteazaAni",
+        "in_locatieSelecteazaAni",
+        "in_dataRaportarii",
+        "in_numeCub",
+        "in_caleAplicatie",
+        "in_numeAplicatie",
+        "in_asteptareIncarcareBI",
+        "in_metodaSelectie",
+        "in_limba",
+        "in_nrLuni",
+        "in_nrAni",
+        "in_metodaExport",
+        "in_siLunaCurenta",
+        "in_cellTextExportExcel",
+        "in_randExportExcel",
+        "in_coloanaExportExcel",
+        "in_lunaDoarInFiltru"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "selecteazaAni.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "out_ani&Sequence_1",
+        "mySelector&Sequence_1",
+        "myElement&Sequence_7",
+        "succes&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_nrAni",
+        "in_numeCub",
+        "in_limba",
+        "in_locatieSelecteazaAni",
+        "in_pozitieSelecteazaAni"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ApasaButon.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "myClickType&Sequence_1",
+        "myMouseButton&Sequence_1",
+        "depl_orizontal&Sequence_1",
+        "myClippingRegion&Sequence_1",
+        "depl_vertical&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_clickDreapta",
+        "in_locatie",
+        "in_pozitie",
+        "in_numeCub",
+        "out_elementSelectat",
+        "in_dubluClick",
+        "out_succes"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "InitializareVariabileSQLServer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "out_sqlDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_caleAplicatie",
+        "out_numeAplicatie",
+        "out_tipRaport",
+        "out_executaMacroExcel",
+        "out_emailCC",
+        "out_emailTo",
+        "out_emailBody",
+        "out_emailSubiect",
+        "out_extrageRapoarteExcelDinERP",
+        "out_emailSend",
+        "out_emailSendOnlyToMe",
+        "out_emailMe",
+        "out_emailSendOnlyToMeCC",
+        "out_dataRaportarii",
+        "out_executaSQL",
+        "out_fisiereBI",
+        "out_extrageRapoarteExcelDinBI",
+        "out_numarLuniActualizate",
+        "out_impartePeFiliale",
+        "in_numeRobot",
+        "out_numeFisierExcel"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "AsteaptaIncarcareDate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "contor&Sequence_2",
+        "succes&Sequence_1",
+        "myElement&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_numeCub",
+        "in_limba",
+        "out_succes",
+        "in_contor_max"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ManageAutoUpdateWorksheet.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "isChecked&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_set"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "exportaInExcel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "succes&Sequence_14"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_numeCub",
+        "in_caleAplicatie",
+        "in_numeAplicatie",
+        "out_succes",
+        "in_dataRaportarii",
+        "in_rand",
+        "in_coloana",
+        "in_cellText"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WaitForExcelToAppear.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AXCellContent&Sequence_1",
+        "cont&Sequence_1",
+        "mySelector&Sequence_1",
+        "myFuzzySelector&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_rand",
+        "in_cellText",
+        "in_coloana",
+        "in_numarIncercari",
+        "out_Succes"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "exportaDataInAccess.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_numeCub",
+        "in_caleAplicatie",
+        "in_numeAplicatie",
+        "out_succes",
+        "in_dataRaportarii"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ExecutaMacroExcel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_caleAplicatie",
+        "in_numeAplicatie",
+        "out_rezultatExecutie"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
